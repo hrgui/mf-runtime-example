@@ -7,7 +7,7 @@ init({
   remotes: [
     {
       name: "app02",
-      entry: "https://www.hrgui.dev/mf-playground/button/remoteEntry.js",
+      entry: "https://www.hrgui.dev/mf-playground/button/remoteEntry.js?v=" + Date.now(),
       alias: "app02",
     },
   ],
