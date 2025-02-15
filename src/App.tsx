@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import ReactDOM from "react-dom";
 import "./App.css";
 import { init, loadRemote } from "@module-federation/enhanced/runtime";
 
@@ -11,6 +12,26 @@ init({
       alias: "app02",
     },
   ],
+  shared: {
+    react: {
+      version: "19.0.0",
+      scope: "default",
+      lib: () => React,
+      shareConfig: {
+        singleton: true,
+        requiredVersion: "^19.0.0",
+      },
+    },
+    "react-dom": {
+      version: "19.0.0",
+      scope: "default",
+      lib: () => ReactDOM,
+      shareConfig: {
+        singleton: true,
+        requiredVersion: "^19.0.0",
+      },
+    },
+  },
 });
 
 const RemoteButton = React.lazy(
