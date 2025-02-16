@@ -12,6 +12,7 @@ body {
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .content h1 {
